@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	_ "github.com/prestodb/presto-go-client/presto"
+	"golang.org/x/tools/go/ssa/interp/testdata/src/fmt"
 )
 
 func main() {
@@ -12,4 +13,5 @@ func main() {
 	if err != nil {
 		panic("Unble to connect")
 	}
+	fmt.Println(db)
 }
